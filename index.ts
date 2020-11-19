@@ -1,12 +1,10 @@
-import bodyParser from 'body-parser';
-import { SERVER_PORT } from './enviroment/enviroment';
 import Server from './models/server';
 import router from './routes/router';
 import express from 'express';
 
 import cors from 'cors';
 
-const server = new Server();
+const server =  Server.instance;
 
 // Body parser
 server.app.use(express.urlencoded({extended:true})); 
